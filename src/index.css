@@ -1,34 +1,134 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
 
+/* custom properties */
 :root {
-  --primary: #12bca2;
-  --secondary: #6d15df;
-}
-h1,h2,h3 {
-  margin: 0;
+  /* colors */
+  --clr-primary: #12bca2;
+  --clr-secondary: #6d15df;
+  --clr-white: #fff;
+  --clr-white-800: #f2f2f2;
+  --clr-white-600: #ccc;
+  --clr-error: firebrick;
+
+  /* utils */
+  --border-rad-sm: 6px;
 }
 
+/* utils */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
 body {
   margin: 0;
   color: #333;
-  font-family: 'Poppins';
-  background: #f2f2f2;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--clr-white-800);
 }
-nav {
-  background: var(--primary);
+.btn {
+  margin-block: 1em;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border: 0;
+  border-radius: var(--border-rad-sm);
+}
+.btn:hover {
+  filter: brightness(110%);
+}
+.error {
+  color: var(--clr-error);
+  padding-block: 0.5em;
+}
+
+.offscreen {
+  display: none;
+}
+
+/* general */
+header {
+  background-color: var(--clr-primary);
   padding: 10px 20px;
   text-align: center;
 }
 nav a {
-  color: #f2f2f2;
+  color: var(--clr-white-800);
   margin: 10px;
   display: inline-block;
 }
-nav h1 {
-  color: #fff;
+header h1 {
+  color: var(--clr-white);
 }
 .page {
   max-width: 1200px;
   margin: 20px auto;
   padding: 20px;
+}
+
+/* shake styles */
+.shakes-grid {
+  margin-top: 3em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3em;
+}
+
+.shake-card {
+  width: 100%;
+  padding: 0.8em;
+  background-color: var(--clr-white);
+  border-radius: var(--border-rad-sm);
+  position: relative;
+}
+
+.shake-card .shake-rating {
+  width: 40px;
+  height: 0;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 20px 0;
+  line-height: 0;
+  text-align: center;
+  background-color: var(--clr-secondary);
+  color: var(--clr-white);
+  border-radius: var(--border-rad-sm);
+}
+
+/* create shake form */
+.shake-form {
+  width: min(100%, 500px);
+  margin: 2em auto;
+  padding: 1.5em;
+  background-color: var(--clr-white);
+  border-radius: var(--border-rad-sm);
+}
+
+.shake-form input,
+.shake-form textarea {
+  width: 100%;
+  display: block;
+  margin-bottom: 0.7em;
+  padding: 0.5em;
+  border: 1px solid var(--clr-white-600);
+  border-radius: var(--border-rad-sm);
+}
+
+.shake-form .shake-form-btn {
+  width: 100%;
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
 }
