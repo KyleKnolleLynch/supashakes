@@ -18,9 +18,8 @@ const Create = () => {
   const onFormSubmit = async e => {
     e.preventDefault()
 
-
     //  handle errors
-    if (!title && !method && !rating) {
+    if (!title|| !method|| !rating) {
       setFormError('Please complete all fields')
       return
     }
@@ -50,7 +49,7 @@ const Create = () => {
 
   const onInputChange = e => {
     const { name, value } = e.target
-    setFormData({ ...formData, [name]: value })
+    setFormData(prev => ({ ...prev, [name]: value }))
   }
 
   const clearFormError = () => {
