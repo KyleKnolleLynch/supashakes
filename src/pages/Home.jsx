@@ -9,6 +9,10 @@ const Home = () => {
   const [fetchError, setFetchError] = useState(null)
   const [shakes, setShakes] = useState(null)
 
+  const handleDelete = id => {
+    setShakes(prev => prev.filter(sh => sh.id !== id))
+  }
+
   useEffect(() => {
     const fetchShakes = async () => {
       const { data, error } = await supabase.from('shakes').select()
@@ -34,7 +38,7 @@ const Home = () => {
         {/* order by buttons */}
         <div className="shakes-grid">
           {shakes?.map(shake => (
-            <ShakeCard key={shake.id} shake={shake} />
+            <ShakeCard key={shake.id} shake={shake} handleDelete={handleDelete} />
           ))}
         </div>
       </section>

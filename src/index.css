@@ -115,9 +115,10 @@ header h1 {
   text-align: right;
 }
 
-.shake-card .shake-card-edit-icon {
+.shake-card .shake-card-icon {
   color: var(--clr-white-500);
   background-color: var(--clr-white-800);
+  margin-left: 10px;
   padding: 0.4em;
   border-radius: var(--border-rad-full);
   font-size: 1.2rem;
