@@ -1,9 +1,6 @@
-# Starter React Project for the Supabase Course
+# Supabase crash course
 
-**How to run the starter project:**
+### Shake recipe creator 
+<br>
 
-1. Once downloaded, navigate to the project directory in a terminal and run **npm install** to install all the project dependencies.
-2. In the project directory, run **npm start** to run the app & view it in a browser at [http://localhost:3000](http://localhost:3000).
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Simple crud app to get the basics of supabase. Big thanks to Shaun Pelling aka [The Net Ninja](https://www.youtube.com/c/TheNetNinja) for this starter code and tutorial.
