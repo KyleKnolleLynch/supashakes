@@ -43,8 +43,7 @@ body {
   background-color: var(--clr-white-900);
 }
 .btn {
-  margin-block: 1em;
-  padding: 0.5em 1em;
+  padding: 0.4em 0.9em;
   cursor: pointer;
   border: 0;
   border-radius: var(--border-rad-sm);
@@ -144,8 +143,16 @@ header h1 {
   border-radius: var(--border-rad-sm);
 }
 
-.shake-form .shake-form-btn {
+.shake-form button {
   width: 100%;
+  margin-block: 1em;
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+}
+
+/* order-by buttons */
+.order-by button {
+  margin-right: 10px;
   background-color: var(--clr-primary);
   color: var(--clr-white);
 }

@@ -72,7 +72,7 @@ const Create = () => {
 
         <p className={errClass}>{formError}</p>
 
-        <button className='btn shake-form-btn'>Create Shake Recipe</button>
+        <button className='btn'>Create Shake Recipe</button>
       </form>
     </main>
   )
